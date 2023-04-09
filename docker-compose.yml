@@ -1,0 +1,27 @@
+version: "3"
+services:
+    web:
+        build:
+            context: ./laravel
+            dockerfile: Dockerfile
+        ports:
+            - "8000:9000"
+        volumes:
+            - ./laravel:/var/www/html
+        networks:
+            - laravel
+    client:
+        build:
+            context: ./reactjs
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./reactjs:/usr/src/app
+        networks:
+            - reactjs
+        depends_on:
+            - web
+networks:
+    laravel:
+    reactjs:
