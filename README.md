@@ -1,30 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/harahm29/HMB-news/blob/main/public/logo/log-240.svg" width="400" alt="HMB News"></a></p>
+<p align="center"><a href="https://imharsh.web.app/" target="_blank"><img src="https://github.com/harahm29/HMB-news/blob/main/public/logo/log-240.svg" width="400" alt="HMB News"></a></p>
 
 ## About HMB News
 
-This is a [HMB News] project bootstrapped with backend and frontend.
+HMB News is a web application that allows users to read news articles from various sources, including NewsAPI, The Guardian, and New York Times. This project is built with ReactJS, Laravel 9, and Tailwind CSS.
 
-## backend and frontend Getting installtion
+## Installation
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/harahm29/HMB-news.git
 ```
 
-First, .env.example rename .env then please flow installtion steps
+2. Rename `.env.example` to `.env`
 
-1. please install composer:
+3. Install composer:
 
 ```bash
 composer install
 ```
 
-2. please install npm :
+4. Install npm:
 
 ```bash
 npm install
 ```
 
-3.please setup you db access on .env file and migrate the db :
+5. Configure your database access in the .env file, and then run the migrations :
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -37,7 +39,7 @@ DB_PASSWORD=
 php artisan migrate
 ```
 
-4.please setup you email access on .env file and use email in register, new password , etc :
+6 .Configure your email settings in the .env file to enable registration, password reset, and other email-based features.:
 
 MAIL_MAILER=smtp
 MAIL_HOST=mailpit
@@ -48,16 +50,24 @@ MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
-## backend and frontend serve
+## Usage
 
-1. please start frontend:
+To start using HMB News, follow these steps:
+
+1. Start the frontend server:
 
 ```bash
 npm run dev
 ```
 
-2. please start backend:
+2. Start the backend server:
 
 ```bash
 php artisan serve
 ```
+
+3. Open your web browser and go to http://localhost:8000 to access the HMB News web application.
+
+## Contributing
+
+If you'd like to contribute to HMB News, please fork the repository and create a pull request with your changes. Before submitting your pull request, please ensure that your changes are thoroughly tested and that the project is still functional.
